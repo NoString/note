@@ -1,0 +1,34 @@
+#nav{
+	background:wheat;
+	width: 200px;
+}
+h1{
+	/* 设置背景色,设置背景图片,设置背景图片水平位置,设置背景图片垂直位置,水平图片仅出现一次 */
+	background: red url(img/down.png) 175px 9px no-repeat;
+	text-align: center;
+	color: #008000;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 35px;
+}
+ul li{
+	/* 行高 */
+	height: 30px;
+	/* 去除圆点 */
+	list-style: none;
+	/* 缩进 */
+	text-indent: 1em;
+	/* 设置背景色,设置背景图片,设置背景图片水平位置,设置背景图片垂直位置,水平图片仅出现一次 */
+	background: url(img/right.png) 135px 4px no-repeat;
+}
+a{
+	color: #000;
+	/* 去除链接下划线 */
+	text-decoration: none;
+}
+
+a:hover{
+	color: orange;
+	/* 添加悬浮下划线 */
+	text-decoration: underline;
+}

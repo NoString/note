@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.float_right{
+				float: right;
+			}
+			#displayer{
+				border: 2px solid #8A2BE2;
+			}
+			#solution1{
+				border: 2px solid #7FFF00;
+				overflow: hidden;
+			}
+			#solution2{
+				border: 2px solid #FF0000;
+				overflow: hidden;
+			}
+			/* 以添加伪类的方式来解决塌陷问题 */
+			#solution2::after{
+				content: ;
+				display: block;
+				clear: both;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<!-- 可以看到,虽然两个p标签是被包裹在div里,但是显式的时候是在外面 -->
+		<div id="displayer">
+			<p id="t1" class="float_right">一段文字</p>
+			<p id="t2" class="float_right">另一段文字</p>
+		</div>
+		<br>
+		<br>
+		<hr >
+		<!-- 解决方式1,通过overflow -->
+		<div id="solution1">
+			<p id="s1" class="float_right">通过overflow解决塌陷问题</p>
+			<br>
+			<p id="s2" class="float_right">另一段文字</p>
+		</div>
+		<hr >
+		<!-- 解决方式2,通过在父标签加入伪类来解决塌陷 -->
+		<div id="solution2">
+			<p id="s1" class="float_right">通过伪类解决塌陷问题</p>
+			<br>
+			<p id="s2" class="float_right">另一段文字</p>
+		</div>
+	</body>
+</html>

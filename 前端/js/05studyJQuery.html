@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- 通过CDN的方式导入JQuery -->
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<!-- JQ公式: $(选择内容).action(执行的动作) -->
+	</head>
+	<body>
+		<!-- id选择器 -->
+		<a href="#" id="testa">id选择器</a>
+		<!-- class选择器 -->
+		<a href="#" class="testClass">class选择器</a>
+		<!-- 标签选择器 -->
+		<p>标签选择器</p>
+		<script type="text/javascript">
+			$("#testa").click(function(){
+				alert("Hello,JQuery")
+			});
+			$('.testClass').click(function () {
+				alert("class选择器")
+			});
+			$('p').click(function () {
+				alert("标签选择器")
+			})
+			
+			$('#testa').text("通过id选择器修改值");
+			let content = $('#testa').text();
+		</script>
+	</body>
+</html>

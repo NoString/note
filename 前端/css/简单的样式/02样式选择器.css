@@ -1,0 +1,9 @@
+/* 通过 .样式名 的方式来设置一个样式被标签调用,叫做class选择器*/
+.style1{
+	color: cornflowerblue;
+}
+
+/* 通过 #id 的方式来对单独的一个标签设置样式,叫做类选择器*/
+#idStyle{
+	color: chartreuse;
+}

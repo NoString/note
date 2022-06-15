@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.format{
+				width: 200px;
+				height: 20px;
+			}
+			.all_border{
+				border: 2px solid #000000;
+			}
+			.excursion1{
+				/* 设置偏移,relative表示偏移定位 */
+				position: relative;
+				/* 设置偏移量 */
+				right: 30px;
+				top: -15px;
+			}
+			.excursion2{
+				position: relative;
+				left: 20px;
+				bottom: -20px;
+			}
+			.absolute_broswer1{
+				position: absolute;
+				left: 100px;
+				top: -5px;
+			}
+			.allow_postion{
+				position: relative;
+			}
+			.absolute_broswer2{
+				position: absolute;
+				right: 15px;
+				
+			}
+			.absolute_father1{
+				position: absolute;
+				top: 20px;
+			}
+			.absolute_father2{
+				position: absolute;
+				left: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 相对定位,相对于原位置进行偏移 -->
+		<div class="all_border">
+			<h1>相对定位</h1>
+			<div class="format excursion1" style="background-color: #8A2BE2;">
+				
+			</div>
+			<div class="format excursion2" style="background-color: #6495ED;">
+			</div>
+		</div>
+		<br >
+		<!-- 绝对定位,没有父级元素的前提下,相对于浏览器定位 -->
+		<div class="all_border">
+			<h1>相较于浏览器绝对定位</h1>
+			<div class="format absolute_broswer1" style="background-color: #FF4500;">
+				
+			</div>
+			<div class="format absolute_broswer2" style="background-color: #FFA500;">
+				
+			</div>
+		</div>
+		<br>
+		<!-- 绝对定位,没有父级元素的前提下,相对于浏览器定位 -->
+		<!-- 此时,父级div已经开启相对定位(all_),它里面的子标签会根据这个div进行定位 -->
+		<div class="all_border allow_postion">
+			<h1>相较于父级元素绝对定位</h1>
+			<div class="format absolute_father1" style="background-color: cyan;">
+				
+			</div>
+			<div class="format absolute_father2" style="background-color: skyblue;">
+				
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#block{
+				/* 更改元素等级,inline:行级,block:块级, inline-block:行块级(可以内连,在一行),none:不展示*/
+				display: inline;
+				border: 2px solid #55AAFF;
+			}
+			#line{
+				margin-left: 5px;
+				display: inline-block;
+				border: 2px solid #008000;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>正常</h1>
+		<div style="border: 1px solid #FF0000;">
+			一个div
+		</div>
+		<br>
+		<span style="border: 1px solid #FF0000;">一个span</span>
+		<hr >
+		<h1>改了块级元素和行级元素</h1>
+		<div id="block">
+			将div行级元素
+		</div>
+		<span id="line">将span改成行块级元素</span>
+	</body>
+</html>

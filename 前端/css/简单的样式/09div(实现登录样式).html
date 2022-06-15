@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+		/* 一些标签自带内外边距,或者下划线,在网页初始化时修改他们 */
+			h1,ul,li,a,body{
+				margin: 0;
+				padding: 0;
+				text-decoration: none;
+			}
+			#login{
+				/* 设置边距线,属性:边距线宽度,边距线样式,颜色 */
+				border: 1px solid #55AAFF;
+				width: 235px;
+				height: 140px;
+				/* 设置外边距,第一个参数是上下,第二个参数是左右,auto代表剧中 */
+				margin: 0 auto;
+				/* 设置圆角 */
+				border-radius: 5px;
+			}
+			.input_style{
+				height: 20px;
+				line-height: 30px;
+				margin-top: 5px;
+			}
+			span{
+				width: 50px;
+			}
+			.submit{
+				margin-top: 20px;
+				margin-left: 60px;
+			}
+			.input_box{
+				border: 1px dashed #008000;
+			}
+			#password{
+				margin-left: 16px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="login">
+			<h1>用户登录</h1>
+			<div id="info">
+				<form action="#" method="post">
+					<div id="usernmae" class="input_style">
+						<span>
+							用户名:
+						</span>
+						<input type="text" name="username_box" id="usernmae" class="input_box"/>
+						
+					</div>
+					<div id="password" class="input_style">
+						<span>
+							密码:
+						</span>
+						<input type="password" name="password_box" id="password_box" class="input_box"/>
+						
+					</div>
+						
+					
+					<input type="submit" value="点击登录" class="submit"/>
+					
+					
+				</form>		
+			</div>
+		</div>
+		
+	</body>
+</html>

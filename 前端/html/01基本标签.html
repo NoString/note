@@ -1,0 +1,116 @@
+<!-- 告诉浏览器使用什么规范 -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- meta:描述性标签,描述网站的一些信息,通过设置它可以让网站被搜索引擎录入,SEO -->
+		<meta charset="utf-8">
+		<!-- 标题 -->
+		<title></title>
+	</head>
+	<body>
+		<h1>最大标题标签</h1>
+		<h6>最小标题标签</h6>
+		<p>第一个段落标签</p>
+		<br/><!--	换行标签		-->
+		<p>第二个段落标签</p>
+		<hr/><!-- 水平线标签 -->
+		<strong>粗体段落</strong>
+		<br>
+		<em>斜体段落</em>
+		<p>空&nbsp;格&nbsp;的&nbsp;特&nbsp;殊&nbsp;写&nbsp;法</p>
+		<p>大于号:&gt;</p>
+		<p>小于号:&lt;</p>
+		<p>版权标签:&copy;</p>
+		<p>或者直接通过百度搜索"html转义字符"</p>
+		<hr >
+		<!-- src:链接地址,alt:图片失效显示的文字,title:悬停文字,width:宽度,height:高度 -->
+		<img src="https://gitee.com/zhssss/image/raw/master/20210519131300.png" alt="打开失败" title="悬停文字" width="300px" height="300px">
+	<hr >
+	<!-- href:链接地址,
+		 target:选择打开方式
+			 _blank新标签打开
+			 _self自跳转
+			 #标签名 锚链接,跳到指定标签位置,参照"回到顶部"功能-->
+		<a href="https://gitee.com/zhssss/image/raw/master/20210519131300.png" target="_blank">点击跳转</a>
+	
+	
+	
+	<hr >
+	<!-- 有序列表 -->
+	<ol>
+		<li>有序列表1</li>
+		<li>有序列表2</li>
+		<li>有序列表3</li>
+		<li>有序列表4</li>
+	</ol>
+	<hr >
+	<!-- 无序列表 -->
+	<ul>
+		<li>无序列表1</li>
+		<li>无序列表2</li>
+		<li>无序列表3</li>
+		<li>无序列表4</li>
+	</ul>
+	<hr >
+	<!-- 自定义列表 -->
+	<dl>
+		<dt>标题1</dt>
+		<dd>内容1</dd>
+		<dd>内容2</dd>
+		<dd>内容3</dd>
+		
+		<dt>标题2</dt>
+		<dd>内容1</dd>
+		<dd>内容2</dd>
+		<dd>内容3</dd>
+	</dl>
+	
+	
+	<hr >
+	<!-- 表格
+	 行 tr
+	 列 td
+	 跨行 rowspan="2"
+	 跨列 colspan="2"-->
+	 <table>
+	 	<tr>
+			<td rowspan="2">第一行第一个</td>
+			<td>第一行第二个</td>
+			<td>第一行第三个</td>
+			<td>第一行第四个</td>
+		</tr>
+		
+		<tr>
+			
+			<td>第二行第二个</td>
+			<td>第二行第三个</td>
+			<td>第二行第四个</td>
+		</tr>
+		
+		<tr>
+			<td>第三行第一个</td>
+			<td colspan="2">第三行第二个</td>
+			<td>第三行第三个</td>
+			
+		</tr>
+	 </table>
+	
+	<hr >
+	<!-- 嵌套标签,将其他页面嵌套到本页面中 -->
+	<iframe src="//player.bilibili.com/player.html?aid=251829611&bvid=BV1VY41147j1&cid=444415883&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> 
+	</iframe>
+	<hr >
+	
+	<select name="列表名称">列表名称
+		<option value="值1">值1</option>
+		<option value="值2">值2</option>
+		<option value="值3">值3</option>
+		<option value="值4" selected="selected">值4</option>
+	</select>
+	<hr >
+	
+	<textarea name="textField" cols="200" rows="50" id="area">文本域</textarea>
+	<!-- label标签,点过之后跳到另一个控件 -->
+	<label for="area">跳到文本域</label>
+	</body>
+</html>
