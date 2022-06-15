@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>start</title>
+		<script type="text/javascript" src="../js/vue.js"></script>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.css" rel="stylesheet" />
+		
+	</head>
+	
+	<body>
+		<!-- 容器部分 -->
+		<div id="root">
+			<h1>hello {{name}}</h1> <!-- 设置一个内容占位符,名字为name-->
+		</div>
+		<!-- vue部分 -->
+		<script type="text/javascript">
+			Vue.config.productionTip = false; //关闭vue在浏览器控制台里的tip
+			var x = new Vue({
+				el: '#root', //绑定容器
+				data:{
+					name: 'mybatis' //给容器中的占位符设置值
+				}
+			});
+		</script>
+	</body>
+
+</html>
