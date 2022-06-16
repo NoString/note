@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script type="text/javascript" src="../js/vue.js"></script>
+		<title></title>
+	</head>
+	<body>
+		<div id="root">
+			<!-- 最原生的写法是v-model:value = "", 这是简写方法, 通过更改输入框的数据来动态修改data里的数据 -->
+			<!-- 这种绑定方法只能适用于有value属性的标签,入 input, radio -->
+			双向数据绑定<input type="text" v-model="inputVal">
+		</div>
+		<script>
+			new Vue({
+				el: '#root',
+				data:{
+					inputVal : "这是一组双向绑定"
+				}
+			})
+		</script>
+	</body>
+</html>

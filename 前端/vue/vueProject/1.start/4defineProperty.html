@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript" src="../js/vue.js">
+			
+		</script>
+	</head>
+	<body>
+		<script>
+			
+			let age = 19;
+			let student = {
+				name: 'lbw'
+			}
+			//通过object类来修改类中的属性. 1.对象		2.属性名		3.配置项
+			Object.defineProperty(student,'age',{
+				value: age, //设置age属性的值
+				enumerable:true	,//设置属性是否可以被枚举(遍历)
+				writable:true,	//设置属性是否可以被修改
+				configurable:true	,//设置属性是否可以被删除
+				//调用该对象时,运行方法体内容
+				get() {
+					console.log(age);
+					return age;
+				}
+				//修改该对象时,调用该方法
+				set(val){
+					console.log(val);
+					age = val;
+				}
+			})
+		</script>
+	</body>
+</html>
