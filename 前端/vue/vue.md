@@ -116,3 +116,43 @@ A对象的一个属性绑定了B对象某个属性的值后, 修改A对象的值
 			})
 		</script>
 ```
+
+# 事件处理
+
+```vue
+<body>
+		<div id="root">
+			<!-- 通过v-on来绑定vue点击事件,默认会传event过去 -->
+			<button v-on:click="c1">第一种绑定事件</button>
+			<!-- 通过@来绑定vue点击事件,默认会传event过去 -->
+			<button @click="c2">第二种绑定事件</button>
+			<!-- 通过@来绑定vue点击事件,然后通过括号来设置参数,$event表示点击事件,66表示第二个参数的值 -->
+			<button @click="c3($event,66)">第三种绑定事件</button>
+			
+		</div>
+		
+		<script>
+			const vm = new Vue({
+				el: '#root',
+				data:{
+					
+				},
+				// 通过methods参数来配置方法, 里面配置的方法前面不需要加function参数
+				methods: {
+					c1() {
+						alert("第一种点击事件");
+					},
+					c2(event){
+						console.log(event);
+					},
+					c3(event,v1){
+						console.log(event + "-----" + v1);
+					}
+					
+				},
+			});
+		</script>
+	</body>
+```
+
+![image-20220616214428016](https://raw.githubusercontent.com/NoString/image/main/note/202206162144140.png)
