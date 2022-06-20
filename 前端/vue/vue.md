@@ -429,3 +429,73 @@ passive:事件的行为立即执行,不用等待回调
 ```
 
 ![image-20220618155614396](https://raw.githubusercontent.com/NoString/image/main/note/202206181556479.png)
+
+# 过滤器
+
+```vue
+<body>
+		<div id="root">
+			<h2>{{times | formatTime}}</h2>
+			<!-- 通过管道符连接过滤器,并且传参 -->
+			<h2>{{times | formatTime('参数p1')}}</h2>
+		</div>
+		<script>
+			new Vue({
+				el: '#root',
+				data:{
+					times: 1655704813
+				},
+				filters: {
+					// value是times, p1可以设置默认值
+					formatTime(value,p1 = '12321321') {
+						console.log(value);
+						console.log(p1);
+						return value;
+					}
+				}
+			})
+		</script>
+	</body>
+```
+
+![image-20220620141436502](https://raw.githubusercontent.com/NoString/image/main/note/202206201414635.png)
+
+# 生命周期
+
+```vue
+	<body>
+		<div id="root">
+			
+		</div>
+		<script>
+			new Vue({
+				el: '#root',
+				data:{
+					a:1
+				},
+				beforeCreate(){
+					console.log('data里的数据加载之前调用该方法');
+				},
+				created(){
+					console.log('data里的数据加载之后,可以对data的数据进行操作了');
+				},
+				beforeMount(){
+					console.log('所有的DOM挂在之前,此时操作DOM是无效的');
+				},
+				mounted(){
+					console.log('所有DOM加载之后调用该方法,此时操作DOM和data都是有效的,一般写一些初始化在该方法');
+				},
+				beforeUpdate(){
+					console.log('data里的数据更改之前调用该方法');
+				},
+				updated(){
+					console.log('data里的数据更新之后调用该方法');
+				}
+				
+				
+				
+			})
+		</script>
+	</body>
+```
+

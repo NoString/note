@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript" src="../js/vue.js">
+			
+		</script>
+	</head>
+	<body>
+		<div id="root">
+			
+		</div>
+		<script>
+			new Vue({
+				el: '#root',
+				data:{
+					a:1
+				},
+				beforeCreate(){
+					console.log('data里的数据加载之前调用该方法');
+				},
+				created(){
+					console.log('data里的数据加载之后,可以对data的数据进行操作了');
+				},
+				beforeMount(){
+					console.log('所有的DOM挂在之前,此时操作DOM是无效的');
+				},
+				mounted(){
+					console.log('所有DOM加载之后调用该方法,此时操作DOM和data都是有效的,一般写一些初始化在该方法');
+				},
+				beforeUpdate(){
+					console.log('data里的数据更改之前调用该方法');
+				},
+				updated(){
+					console.log('data里的数据更新之后调用该方法');
+				}
+				
+				
+				
+			})
+		</script>
+	</body>
+</html>

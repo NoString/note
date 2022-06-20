@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript" src="../js/vue.js">
+			
+		</script>
+	</head>
+	<body>
+		<div id="root">
+			<h2>{{times | formatTime}}</h2>
+			<!-- 通过管道符连接过滤器,并且传参 -->
+			<h2>{{times | formatTime('参数p1')}}</h2>
+		</div>
+		<script>
+			new Vue({
+				el: '#root',
+				data:{
+					times: 1655704813
+				},
+				filters: {
+					// value是times, p1可以设置默认值
+					formatTime(value,p1 = '12321321') {
+						console.log(value);
+						console.log(p1);
+						return value;
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
