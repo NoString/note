@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript" src="../js/vue.js">
+			
+		</script>
+	</head>
+	<body>
+		<div id="root">
+			<h1>台州今天:{{text}}</h1>
+			<button type="button" @click="change">点我更改</button>
+		</div>
+		<script type="text/javascript">
+			const vm = new Vue({
+				el:"#root",
+				data:{
+					rain: true
+				},
+				methods: {
+					change(event) {
+						
+						return this.rain = !this.rain
+					}
+				},
+				computed: {
+					text() {
+						return this.rain ? "下雨了" : "天晴了"
+					}
+				},
+				
+			})
+			vm.$watch('rain',{
+				handler(newOne,oldOne){
+					console.log("另一种方式来监测");
+					console.log(newOne);
+					console.log(oldOne);
+				}
+			})
+		</script>
+	</body>
+</html>
