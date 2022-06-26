@@ -499,3 +499,33 @@ passive:事件的行为立即执行,不用等待回调
 	</body>
 ```
 
+# 组件化
+
+## 脚手架
+
+- 安装脚手架首先要安装NodeJs
+- 先用cmd更换阿里镜像:npm config set registry https://registry.npm.taobao.org
+- 通过npm安装vue: npm install -g @vue/cli
+- 通过vue来创建一个新项目: vue create hellovue
+- 创建成功之后,会新生成一个目录,进去之后运行 npm run serve可以开启一个小型服务
+- 通过npm run build将vue文件生成为正常的html文件
+
+### 目录结构
+
+src-assets: 放静态资源
+
+src-components:放组件
+
+
+
+
+
+
+
+vue页面上的所有内容定义为组件,一个组件包含html,css,js. 实现应用中局部功能的代码和资源的集合
+
+- 组件不能配置el属性
+- 组件里的data一定要写成函数式,返回值为一个对象
+- 在vm里注册组件时,如果是多个单词,用单引号包裹起来,用-链接, 例如: 'my-school', 创建单个文件也是这样
+- 组件的本质是一个VueComponent对象,只不过vue帮忙实例化
+- 每次调用Vue.extend都是返回一个全新的对象,所以每个组件都是内存中独立的个体.
