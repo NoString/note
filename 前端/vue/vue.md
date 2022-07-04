@@ -529,3 +529,84 @@ vue页面上的所有内容定义为组件,一个组件包含html,css,js. 实现
 - 在vm里注册组件时,如果是多个单词,用单引号包裹起来,用-链接, 例如: 'my-school', 创建单个文件也是这样
 - 组件的本质是一个VueComponent对象,只不过vue帮忙实例化
 - 每次调用Vue.extend都是返回一个全新的对象,所以每个组件都是内存中独立的个体.
+
+### 通过vue中的ref替代原生的id标签
+
+```vue
+<template>
+  <div id="app">
+    <h1 ref="common">这是一个普通标签</h1>
+    <img src="./assets/logo.png">
+    <button @click="show">点我显示</button>
+    <HelloWorld ref="special"></HelloWorld>
+  </div>
+</template>
+
+<script>
+import HelloWorld from './components/HelloWorld'
+
+export default {
+  name: 'App',
+  components: {
+    HelloWorld
+  },
+  methods: {
+    show (v1) {
+      console.log('展示一个普通标签:' + this.$refs.common)
+      console.log('展示一个特殊标签:' + this.$refs.special)
+    }
+  }
+}
+</script>
+
+<style>
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
+
+```
+
+![image-20220704133431542](https://raw.githubusercontent.com/NoString/image/main/note/202207041334633.png)
+
+### mixin
+
+通过mixin可以导入某个js文件里封装的js代码,达到代码复用
+
+### 插件
+
+通过Vue.use(插件名)来使用
+
+### 限制style的作用域
+
+```vue
+<templeter>
+
+</templeter>
+<script>
+</script>
+
+<!-- vue默认会将所有的style汇总为一个文件,这样就导致同名的style就会出现冲突,通过scoped标签将style的作用域限制于局部-->
+<style scoped>
+</style>
+```
+
+指定style语法
+
+```vue
+<!--也可以写less,但是不会-->
+<style lang="css">
+
+</style>
+```
+
+## 组件化编码流程
+
+1. 实现静态组件,抽取组件,使用组件实现静态页面效果
+2. 实现动态数据
+3. 实现交互
